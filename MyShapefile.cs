@@ -11,6 +11,7 @@ namespace Map2SQL
     public class MyShapefile
     {
         DataAccess da = new DataAccess();
+        FontConverter cv = new FontConverter();
         // Thuoc tinh
         public String FileName { get; set; }
         public String SQLTableName { get; set; }
@@ -59,7 +60,6 @@ namespace Map2SQL
                     String insertQuery = "INSERT INTO " + SQLTableName + "(" + dsCot
                         + ") VALUES(";
                     String values = "";
-                    int demCot = 0;
                     foreach(DataColumn col in featurei.Table.Columns)
                     {
                         if (col.ColumnName.ToLower().Equals("oid") || col.ColumnName.ToLower().Equals("id"))
@@ -67,11 +67,14 @@ namespace Map2SQL
                         String type = col.DataType.ToString().ToLower().Split('.')[1];
                         if(type.ToLower().Equals("string"))
                         {
-                            values += "N'" + featurei.ItemArray[demCot].ToString() + "', ";
+                            values += "N'" + cv.TCVN3ToUnicode(featurei.ItemArray[col.Ordinal].ToString()) + "', ";
                         }
                         else
                         {
-                            values += featurei.ItemArray[demCot].ToString() + ", ";
+                            if (featurei.ItemArray[col.Ordinal].ToString().Length > 0)
+                                values += featurei.ItemArray[col.Ordinal].ToString() + ", ";
+                            else
+                                values += "0, ";
                         }
                     }
                     String polygon = featurei.Geometry.ToString();

@@ -18,7 +18,6 @@ D:\Projects\XLAK61\Map2SQL\Map2SQL\bin\Debug\System.Data.SQLite.dll
 D:\Projects\XLAK61\Map2SQL\Map2SQL\bin\Debug\System.Data.SQLite.Linq.dll
 D:\Projects\XLAK61\Map2SQL\Map2SQL\bin\Debug\Newtonsoft.Json.xml
 D:\Projects\XLAK61\Map2SQL\Map2SQL\bin\Debug\SharpMap.xml
-D:\Projects\XLAK61\Map2SQL\Map2SQL\obj\Debug\Map2SQL.csprojAssemblyReference.cache
 D:\Projects\XLAK61\Map2SQL\Map2SQL\obj\Debug\Map2SQL.Form1.resources
 D:\Projects\XLAK61\Map2SQL\Map2SQL\obj\Debug\Map2SQL.Properties.Resources.resources
 D:\Projects\XLAK61\Map2SQL\Map2SQL\obj\Debug\Map2SQL.csproj.GenerateResource.cache
