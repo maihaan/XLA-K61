@@ -1,0 +1,11 @@
+D:\Projects\SharpmapDemo\SharpmapDemo\bin\SharpmapDemo.dll.config
+D:\Projects\SharpmapDemo\SharpmapDemo\bin\SharpmapDemo.dll
+D:\Projects\SharpmapDemo\SharpmapDemo\bin\SharpmapDemo.pdb
+D:\Projects\SharpmapDemo\SharpmapDemo\bin\SharpMap.dll
+D:\Projects\SharpmapDemo\SharpmapDemo\bin\System.Data.SQLite.dll
+D:\Projects\SharpmapDemo\SharpmapDemo\bin\System.Data.SQLite.Linq.dll
+D:\Projects\SharpmapDemo\SharpmapDemo\bin\SharpMap.xml
+D:\Projects\SharpmapDemo\SharpmapDemo\obj\Debug\SharpmapDemo.csproj.CoreCompileInputs.cache
+D:\Projects\SharpmapDemo\SharpmapDemo\obj\Debug\SharpmapDemo.csproj.CopyComplete
+D:\Projects\SharpmapDemo\SharpmapDemo\obj\Debug\SharpmapDemo.dll
+D:\Projects\SharpmapDemo\SharpmapDemo\obj\Debug\SharpmapDemo.pdb
