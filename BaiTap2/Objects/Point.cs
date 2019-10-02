@@ -8,11 +8,10 @@ using System.Web;
 
 namespace QuanLyNhaO.Objects
 {
-    public class Polygon
+    public class Point
     {
         public int ID { get; set; }
         public String Ten { get; set; }
-        public float DienTich { get; set; }
         public List<PointF> Geom { get; set; }
 
         DataAccess da = new DataAccess();
@@ -45,7 +44,7 @@ namespace QuanLyNhaO.Objects
                 for (int i = 0; i < map.GetFeatureCount(); i++)
                 {
                     var featurei = map.GetFeature((uint)i);
-                    String insertQuery = "INSERT INTO tbPolygon(" + dsCot
+                    String insertQuery = "INSERT INTO tbPoint(" + dsCot
                         + ") VALUES(";
                     String values = "";
                     foreach (DataColumn col in featurei.Table.Columns)
@@ -66,7 +65,7 @@ namespace QuanLyNhaO.Objects
                         }
                     }
                     String polygon = featurei.Geometry.ToString();
-                    values += "Geometry::STPolyFromText('" + polygon + "', 4326)";
+                    values += "Geometry::STPointFromText('" + polygon + "', 4326)";
                     insertQuery += values + ")";
                     demKQ += da.Write(insertQuery);
                 }
@@ -78,21 +77,20 @@ namespace QuanLyNhaO.Objects
             }
         }
 
-        public List<Polygon> Select(String condition)
+        public List<Point> Select(String condition)
         {
-            String query = "Select ID, Ten, DienTich, Geom.ToString() As Geom From tbPolygon";
+            String query = "Select ID, Ten, Geom.ToString() As Geom From tbPoint";
             if (!String.IsNullOrEmpty(condition))
                 query += " Where " + condition;
             DataTable tb = da.Read(query);
             if (tb != null && tb.Rows.Count > 0)
             {
-                List<Polygon> ds = new List<Polygon>();
+                List<Point> ds = new List<Point>();
                 foreach (DataRow r in tb.Rows)
                 {
-                    Polygon p = new Polygon();
+                    Point p = new Point();
                     p.ID = int.Parse(r["ID"].ToString());
                     p.Ten = r["Ten"].ToString();
-                    p.DienTich = float.Parse(r["DienTich"].ToString());
                     String geoData = r["Geom"].ToString();
                     geoData = geoData.Substring(10, geoData.Length - 12);
                     foreach (String pointData in geoData.Split(','))

@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="QuanLyNhaO.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>My Web GIS</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Images/MyWebGis.ico" rel="icon" />
+    <link href="Styles/MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="Trang">
+            <div class="DauTrang">
+                <div class="Menu">
+                    <img src="Images/Logo.png" height="40"/>
+                    <a href="#" class="MenuItem">Home</a>
+                    <a href="#" class="MenuItem">Products</a>
+                    <a href="#" class="MenuItem">Support</a>
+                    <a href="#" class="MenuItem">Contact</a>
+                </div>
+            </div>
+            <div class="ThanTrang">
+                <div class="SlideShow">
+                    <img class="mySlides" src="Slides/img1.jpg" style="width:100%">
+                    <img class="mySlides" src="Slides/img2.jpg" style="width:100%">
+                    <img class="mySlides" src="Slides/img3.jpg" style="width:100%">
+
+                    <button class="SlideButtonLeft" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="SlideButtonRight" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+            }
+        </script>
+    </form>
+</body>
+</html>
