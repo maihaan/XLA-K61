@@ -1,0 +1,6 @@
+D:\Projects\XLAK61\CacKieuDL\CacKieuDL\bin\Debug\CacKieuDL.exe
+D:\Projects\XLAK61\CacKieuDL\CacKieuDL\bin\Debug\CacKieuDL.pdb
+D:\Projects\XLAK61\CacKieuDL\CacKieuDL\obj\Debug\CacKieuDL.csprojAssemblyReference.cache
+D:\Projects\XLAK61\CacKieuDL\CacKieuDL\obj\Debug\CacKieuDL.csproj.CoreCompileInputs.cache
+D:\Projects\XLAK61\CacKieuDL\CacKieuDL\obj\Debug\CacKieuDL.exe
+D:\Projects\XLAK61\CacKieuDL\CacKieuDL\obj\Debug\CacKieuDL.pdb

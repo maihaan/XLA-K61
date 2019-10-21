@@ -1,0 +1,80 @@
+﻿body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    color: #373737;
+    background-color: #f1f1f1;
+}
+
+.Trang{
+    margin: 0px;    
+}
+
+.DauTrang{
+    height: 50px;
+    width: 100%;
+    background-color: #373737;
+    color: #fff;
+    font-size:1.2em;
+    padding: 5px;
+}
+
+.ThanTrang{
+    background-color: #fff;
+    width: 80%;
+    margin: 0px auto 0px auto;
+    min-height: 600px;
+    padding: 10px;
+}
+
+.Menu {
+    width: 80%;
+    margin: 5px auto 0px auto;
+    height: 40px;
+}
+
+.MenuItem{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight:700;
+}
+
+.Menu a{
+    text-decoration:none;
+    color: #fff;    
+}
+
+.Menu img{
+    margin-bottom:-10px;
+}
+
+.Menu a:hover{
+    border-bottom: 2px solid #f1f1f1;  
+}
+
+.mySlides {
+    display: none;
+}
+
+.SlideButtonLeft {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%,-50%);
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    border-radius: 0px 15px 15px 0px; 
+}
+
+.SlideButtonRight {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0%,-50%);
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    border-radius: 15px 0px 0px 15px;
+}
+
